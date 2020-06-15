@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B16669E22493335D00811733 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669E12493335D00811733 /* Reachability.swift */; };
+		B16669E4249342E500811733 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669E3249342E500811733 /* Connectivity.swift */; };
+		B16669E92493531700811733 /* OEPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16669E62493531700811733 /* OEPickerView.xib */; };
+		B16669EA2493531700811733 /* OEPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669E72493531700811733 /* OEPickerView.swift */; };
+		B16669EB2493531700811733 /* OEPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669E82493531700811733 /* OEPickerViewDataSource.swift */; };
+		B16669ED249353DC00811733 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669EC249353DC00811733 /* UIApplication+Extension.swift */; };
+		B16669EF249353FA00811733 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669EE249353FA00811733 /* UIDevice+Extension.swift */; };
+		B16669F3249354C200811733 /* EventObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669F2249354C200811733 /* EventObject+CoreDataProperties.swift */; };
+		B16669F5249393AF00811733 /* EventNetworkResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16669F4249393AF00811733 /* EventNetworkResource.swift */; };
+		B1B76A182492485000F48947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A172492485000F48947 /* AppDelegate.swift */; };
+		B1B76A1A2492485000F48947 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A192492485000F48947 /* SceneDelegate.swift */; };
+		B1B76A1F2492485000F48947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B76A1D2492485000F48947 /* Main.storyboard */; };
+		B1B76A222492485000F48947 /* OfflineEvent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A202492485000F48947 /* OfflineEvent.xcdatamodeld */; };
+		B1B76A242492485100F48947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1B76A232492485100F48947 /* Assets.xcassets */; };
+		B1B76A272492485100F48947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B76A252492485100F48947 /* LaunchScreen.storyboard */; };
+		B1B76A322492485100F48947 /* OfflineEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A312492485100F48947 /* OfflineEventTests.swift */; };
+		B1B76A3D2492485100F48947 /* OfflineEventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A3C2492485100F48947 /* OfflineEventUITests.swift */; };
+		B1B76A502492494200F48947 /* OELocalDbHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A4F2492494200F48947 /* OELocalDbHandler.swift */; };
+		B1B76A522492497300F48947 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A512492497300F48947 /* EventModel.swift */; };
+		B1B76A5C24924AC800F48947 /* EventObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A5A24924AC800F48947 /* EventObject+CoreDataClass.swift */; };
+		B1B76A5E24924E3900F48947 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A5D24924E3900F48947 /* Date+Extension.swift */; };
+		B1B76A6124924E7D00F48947 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6024924E7C00F48947 /* Coordinator.swift */; };
+		B1B76A6324924E8400F48947 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6224924E8400F48947 /* AppCoordinator.swift */; };
+		B1B76A6724924EC000F48947 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6524924EBF00F48947 /* Repository.swift */; };
+		B1B76A6824924EC000F48947 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6624924EC000F48947 /* DataStore.swift */; };
+		B1B76A6B24924F8E00F48947 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6A24924F8E00F48947 /* EventListViewModel.swift */; };
+		B1B76A6D2492505300F48947 /* EventListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6C2492505300F48947 /* EventListController.swift */; };
+		B1B76A6F249252AC00F48947 /* OEServiceResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A6E249252AC00F48947 /* OEServiceResource.swift */; };
+		B1B76A712492586000F48947 /* OEWebserviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A702492586000F48947 /* OEWebserviceHandler.swift */; };
+		B1B76A732492602700F48947 /* OENetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B76A722492602700F48947 /* OENetworkResponse.swift */; };
+		B1C0D5DC2497299E00E88E46 /* NewEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0D5DB2497299E00E88E46 /* NewEventController.swift */; };
+		B1C0D5DE249738C700E88E46 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0D5DD249738C700E88E46 /* UIViewController+Extension.swift */; };
+		B1C0D5E02497643400E88E46 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0D5DF2497643400E88E46 /* AddEventViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1B76A2E2492485100F48947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B76A0C2492485000F48947 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B76A132492485000F48947;
+			remoteInfo = OfflineEvent;
+		};
+		B1B76A392492485100F48947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1B76A0C2492485000F48947 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1B76A132492485000F48947;
+			remoteInfo = OfflineEvent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B16669E12493335D00811733 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B16669E3249342E500811733 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		B16669E62493531700811733 /* OEPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OEPickerView.xib; sourceTree = "<group>"; };
+		B16669E72493531700811733 /* OEPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OEPickerView.swift; sourceTree = "<group>"; };
+		B16669E82493531700811733 /* OEPickerViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OEPickerViewDataSource.swift; sourceTree = "<group>"; };
+		B16669EC249353DC00811733 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		B16669EE249353FA00811733 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		B16669F2249354C200811733 /* EventObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B16669F4249393AF00811733 /* EventNetworkResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNetworkResource.swift; sourceTree = "<group>"; };
+		B1B76A142492485000F48947 /* OfflineEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B76A172492485000F48947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1B76A192492485000F48947 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B1B76A1E2492485000F48947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1B76A212492485000F48947 /* OfflineEvent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfflineEvent.xcdatamodel; sourceTree = "<group>"; };
+		B1B76A232492485100F48947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1B76A262492485100F48947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1B76A282492485100F48947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B76A2D2492485100F48947 /* OfflineEventTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfflineEventTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B76A312492485100F48947 /* OfflineEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineEventTests.swift; sourceTree = "<group>"; };
+		B1B76A332492485100F48947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B76A382492485100F48947 /* OfflineEventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfflineEventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B76A3C2492485100F48947 /* OfflineEventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineEventUITests.swift; sourceTree = "<group>"; };
+		B1B76A3E2492485100F48947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B76A4F2492494200F48947 /* OELocalDbHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OELocalDbHandler.swift; sourceTree = "<group>"; };
+		B1B76A512492497300F48947 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B1B76A5A24924AC800F48947 /* EventObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B1B76A5D24924E3900F48947 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		B1B76A6024924E7C00F48947 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B1B76A6224924E8400F48947 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B1B76A6524924EBF00F48947 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B1B76A6624924EC000F48947 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		B1B76A6A24924F8E00F48947 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		B1B76A6C2492505300F48947 /* EventListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListController.swift; sourceTree = "<group>"; };
+		B1B76A6E249252AC00F48947 /* OEServiceResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEServiceResource.swift; sourceTree = "<group>"; };
+		B1B76A702492586000F48947 /* OEWebserviceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OEWebserviceHandler.swift; sourceTree = "<group>"; };
+		B1B76A722492602700F48947 /* OENetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OENetworkResponse.swift; sourceTree = "<group>"; };
+		B1C0D5DB2497299E00E88E46 /* NewEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventController.swift; sourceTree = "<group>"; };
+		B1C0D5DD249738C700E88E46 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B1C0D5DF2497643400E88E46 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1B76A112492485000F48947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A2A2492485100F48947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A352492485100F48947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B16669E02493333600811733 /* NetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				B16669E12493335D00811733 /* Reachability.swift */,
+				B16669E3249342E500811733 /* Connectivity.swift */,
+			);
+			path = NetworkReachability;
+			sourceTree = "<group>";
+		};
+		B16669E52493530C00811733 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B16669E72493531700811733 /* OEPickerView.swift */,
+				B16669E62493531700811733 /* OEPickerView.xib */,
+				B16669E82493531700811733 /* OEPickerViewDataSource.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B1B76A0B2492485000F48947 = {
+			isa = PBXGroup;
+			children = (
+				B1B76A162492485000F48947 /* OfflineEvent */,
+				B1B76A302492485100F48947 /* OfflineEventTests */,
+				B1B76A3B2492485100F48947 /* OfflineEventUITests */,
+				B1B76A152492485000F48947 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1B76A152492485000F48947 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A142492485000F48947 /* OfflineEvent.app */,
+				B1B76A2D2492485100F48947 /* OfflineEventTests.xctest */,
+				B1B76A382492485100F48947 /* OfflineEventUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1B76A162492485000F48947 /* OfflineEvent */ = {
+			isa = PBXGroup;
+			children = (
+				B16669E52493530C00811733 /* Util */,
+				B16669E02493333600811733 /* NetworkReachability */,
+				B1B76A6924924F1400F48947 /* ApiHandler */,
+				B1B76A6424924EA000F48947 /* Repository */,
+				B1B76A5F24924E6C00F48947 /* Coordinator */,
+				B1B76A5824924A9600F48947 /* ManagedObject */,
+				B1B76A4E2492489300F48947 /* CoreDataHandler */,
+				B1B76A4D2492488D00F48947 /* Extensions */,
+				B1B76A4C2492487900F48947 /* Scenes */,
+				B1B76A4B2492486A00F48947 /* ViewModel */,
+				B1B76A4A2492485B00F48947 /* DataModel */,
+				B1B76A172492485000F48947 /* AppDelegate.swift */,
+				B1B76A192492485000F48947 /* SceneDelegate.swift */,
+				B1B76A1D2492485000F48947 /* Main.storyboard */,
+				B1B76A232492485100F48947 /* Assets.xcassets */,
+				B1B76A252492485100F48947 /* LaunchScreen.storyboard */,
+				B1B76A282492485100F48947 /* Info.plist */,
+				B1B76A202492485000F48947 /* OfflineEvent.xcdatamodeld */,
+			);
+			path = OfflineEvent;
+			sourceTree = "<group>";
+		};
+		B1B76A302492485100F48947 /* OfflineEventTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A312492485100F48947 /* OfflineEventTests.swift */,
+				B1B76A332492485100F48947 /* Info.plist */,
+			);
+			path = OfflineEventTests;
+			sourceTree = "<group>";
+		};
+		B1B76A3B2492485100F48947 /* OfflineEventUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A3C2492485100F48947 /* OfflineEventUITests.swift */,
+				B1B76A3E2492485100F48947 /* Info.plist */,
+			);
+			path = OfflineEventUITests;
+			sourceTree = "<group>";
+		};
+		B1B76A4A2492485B00F48947 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A512492497300F48947 /* EventModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		B1B76A4B2492486A00F48947 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A6A24924F8E00F48947 /* EventListViewModel.swift */,
+				B1C0D5DF2497643400E88E46 /* AddEventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1B76A4C2492487900F48947 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B1F38B71249777980006F0FC /* NetworkResource */,
+				B1C0D5D82497294A00E88E46 /* CreateEvent */,
+				B1C0D5D72497293D00E88E46 /* EventList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B1B76A4D2492488D00F48947 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A5D24924E3900F48947 /* Date+Extension.swift */,
+				B16669EC249353DC00811733 /* UIApplication+Extension.swift */,
+				B16669EE249353FA00811733 /* UIDevice+Extension.swift */,
+				B1C0D5DD249738C700E88E46 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1B76A4E2492489300F48947 /* CoreDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A4F2492494200F48947 /* OELocalDbHandler.swift */,
+			);
+			path = CoreDataHandler;
+			sourceTree = "<group>";
+		};
+		B1B76A5824924A9600F48947 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				B16669F2249354C200811733 /* EventObject+CoreDataProperties.swift */,
+				B1B76A5A24924AC800F48947 /* EventObject+CoreDataClass.swift */,
+			);
+			path = ManagedObject;
+			sourceTree = "<group>";
+		};
+		B1B76A5F24924E6C00F48947 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A6024924E7C00F48947 /* Coordinator.swift */,
+				B1B76A6224924E8400F48947 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B1B76A6424924EA000F48947 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A6624924EC000F48947 /* DataStore.swift */,
+				B1B76A6524924EBF00F48947 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B1B76A6924924F1400F48947 /* ApiHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A6E249252AC00F48947 /* OEServiceResource.swift */,
+				B1B76A702492586000F48947 /* OEWebserviceHandler.swift */,
+				B1B76A722492602700F48947 /* OENetworkResponse.swift */,
+			);
+			path = ApiHandler;
+			sourceTree = "<group>";
+		};
+		B1C0D5D72497293D00E88E46 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				B1B76A6C2492505300F48947 /* EventListController.swift */,
+			);
+			path = EventList;
+			sourceTree = "<group>";
+		};
+		B1C0D5D82497294A00E88E46 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0D5DB2497299E00E88E46 /* NewEventController.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
+		B1F38B71249777980006F0FC /* NetworkResource */ = {
+			isa = PBXGroup;
+			children = (
+				B16669F4249393AF00811733 /* EventNetworkResource.swift */,
+			);
+			path = NetworkResource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1B76A132492485000F48947 /* OfflineEvent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B76A412492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEvent" */;
+			buildPhases = (
+				B1B76A102492485000F48947 /* Sources */,
+				B1B76A112492485000F48947 /* Frameworks */,
+				B1B76A122492485000F48947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OfflineEvent;
+			productName = OfflineEvent;
+			productReference = B1B76A142492485000F48947 /* OfflineEvent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1B76A2C2492485100F48947 /* OfflineEventTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B76A442492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEventTests" */;
+			buildPhases = (
+				B1B76A292492485100F48947 /* Sources */,
+				B1B76A2A2492485100F48947 /* Frameworks */,
+				B1B76A2B2492485100F48947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1B76A2F2492485100F48947 /* PBXTargetDependency */,
+			);
+			name = OfflineEventTests;
+			productName = OfflineEventTests;
+			productReference = B1B76A2D2492485100F48947 /* OfflineEventTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1B76A372492485100F48947 /* OfflineEventUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B76A472492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEventUITests" */;
+			buildPhases = (
+				B1B76A342492485100F48947 /* Sources */,
+				B1B76A352492485100F48947 /* Frameworks */,
+				B1B76A362492485100F48947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1B76A3A2492485100F48947 /* PBXTargetDependency */,
+			);
+			name = OfflineEventUITests;
+			productName = OfflineEventUITests;
+			productReference = B1B76A382492485100F48947 /* OfflineEventUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1B76A0C2492485000F48947 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Vijay;
+				TargetAttributes = {
+					B1B76A132492485000F48947 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					B1B76A2C2492485100F48947 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = B1B76A132492485000F48947;
+					};
+					B1B76A372492485100F48947 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = B1B76A132492485000F48947;
+					};
+				};
+			};
+			buildConfigurationList = B1B76A0F2492485000F48947 /* Build configuration list for PBXProject "OfflineEvent" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1B76A0B2492485000F48947;
+			productRefGroup = B1B76A152492485000F48947 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1B76A132492485000F48947 /* OfflineEvent */,
+				B1B76A2C2492485100F48947 /* OfflineEventTests */,
+				B1B76A372492485100F48947 /* OfflineEventUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1B76A122492485000F48947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B76A272492485100F48947 /* LaunchScreen.storyboard in Resources */,
+				B16669E92493531700811733 /* OEPickerView.xib in Resources */,
+				B1B76A242492485100F48947 /* Assets.xcassets in Resources */,
+				B1B76A1F2492485000F48947 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A2B2492485100F48947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A362492485100F48947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1B76A102492485000F48947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B76A6824924EC000F48947 /* DataStore.swift in Sources */,
+				B1B76A6324924E8400F48947 /* AppCoordinator.swift in Sources */,
+				B1B76A182492485000F48947 /* AppDelegate.swift in Sources */,
+				B1B76A6D2492505300F48947 /* EventListController.swift in Sources */,
+				B16669E4249342E500811733 /* Connectivity.swift in Sources */,
+				B1C0D5DC2497299E00E88E46 /* NewEventController.swift in Sources */,
+				B16669EA2493531700811733 /* OEPickerView.swift in Sources */,
+				B16669EF249353FA00811733 /* UIDevice+Extension.swift in Sources */,
+				B1B76A6124924E7D00F48947 /* Coordinator.swift in Sources */,
+				B1B76A732492602700F48947 /* OENetworkResponse.swift in Sources */,
+				B16669F5249393AF00811733 /* EventNetworkResource.swift in Sources */,
+				B16669ED249353DC00811733 /* UIApplication+Extension.swift in Sources */,
+				B1B76A6B24924F8E00F48947 /* EventListViewModel.swift in Sources */,
+				B1B76A502492494200F48947 /* OELocalDbHandler.swift in Sources */,
+				B1C0D5DE249738C700E88E46 /* UIViewController+Extension.swift in Sources */,
+				B1B76A222492485000F48947 /* OfflineEvent.xcdatamodeld in Sources */,
+				B1B76A6F249252AC00F48947 /* OEServiceResource.swift in Sources */,
+				B1B76A522492497300F48947 /* EventModel.swift in Sources */,
+				B1B76A1A2492485000F48947 /* SceneDelegate.swift in Sources */,
+				B16669F3249354C200811733 /* EventObject+CoreDataProperties.swift in Sources */,
+				B1B76A5C24924AC800F48947 /* EventObject+CoreDataClass.swift in Sources */,
+				B16669EB2493531700811733 /* OEPickerViewDataSource.swift in Sources */,
+				B16669E22493335D00811733 /* Reachability.swift in Sources */,
+				B1B76A5E24924E3900F48947 /* Date+Extension.swift in Sources */,
+				B1B76A6724924EC000F48947 /* Repository.swift in Sources */,
+				B1B76A712492586000F48947 /* OEWebserviceHandler.swift in Sources */,
+				B1C0D5E02497643400E88E46 /* AddEventViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A292492485100F48947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B76A322492485100F48947 /* OfflineEventTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B76A342492485100F48947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B76A3D2492485100F48947 /* OfflineEventUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1B76A2F2492485100F48947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B76A132492485000F48947 /* OfflineEvent */;
+			targetProxy = B1B76A2E2492485100F48947 /* PBXContainerItemProxy */;
+		};
+		B1B76A3A2492485100F48947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1B76A132492485000F48947 /* OfflineEvent */;
+			targetProxy = B1B76A392492485100F48947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1B76A1D2492485000F48947 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1B76A1E2492485000F48947 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1B76A252492485100F48947 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1B76A262492485100F48947 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1B76A3F2492485100F48947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B1B76A402492485100F48947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1B76A422492485100F48947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEvent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1B76A432492485100F48947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEvent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEvent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1B76A452492485100F48947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEventTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEventTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfflineEvent.app/OfflineEvent";
+			};
+			name = Debug;
+		};
+		B1B76A462492485100F48947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEventTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEventTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfflineEvent.app/OfflineEvent";
+			};
+			name = Release;
+		};
+		B1B76A482492485100F48947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEventUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OfflineEvent;
+			};
+			name = Debug;
+		};
+		B1B76A492492485100F48947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineEventUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Vijay.OfflineEventUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OfflineEvent;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1B76A0F2492485000F48947 /* Build configuration list for PBXProject "OfflineEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B76A3F2492485100F48947 /* Debug */,
+				B1B76A402492485100F48947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B76A412492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEvent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B76A422492485100F48947 /* Debug */,
+				B1B76A432492485100F48947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B76A442492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEventTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B76A452492485100F48947 /* Debug */,
+				B1B76A462492485100F48947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B76A472492485100F48947 /* Build configuration list for PBXNativeTarget "OfflineEventUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1B76A482492485100F48947 /* Debug */,
+				B1B76A492492485100F48947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B1B76A202492485000F48947 /* OfflineEvent.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B1B76A212492485000F48947 /* OfflineEvent.xcdatamodel */,
+			);
+			currentVersion = B1B76A212492485000F48947 /* OfflineEvent.xcdatamodel */;
+			path = OfflineEvent.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B1B76A0C2492485000F48947 /* Project object */;
+}
