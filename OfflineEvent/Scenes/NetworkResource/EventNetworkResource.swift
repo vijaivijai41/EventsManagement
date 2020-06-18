@@ -17,7 +17,7 @@ enum EventResource: OEServiceResource {
     case deleteEvent(event: EventModel)
     
     var baseURL: URL {
-        return URL(string: "https://iostest.ajrgroup.in/event/vijayEvents")!
+        return URL(string: "https://iostest.ajrgroup.in/event/vijayInterviewTask")!
     }
     
     var method: String {
@@ -25,9 +25,9 @@ enum EventResource: OEServiceResource {
         case .fetchEvent:
             return ""
         case .deleteEvent(let event):
-            return event.uuid
+            return "/" + event.uuid
         case .updateEvent(let event):
-            return event.uuid
+            return "/" + event.uuid
         case .addEvent(_):
             return ""
         }

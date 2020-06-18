@@ -7,96 +7,256 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB922070-AE49-441D-88C9-20239AF9728B"
+            uuid = "AEF9D8D5-4BC4-4092-B3F3-6FA4663B5449"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OfflineEvent/Repository/Repository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "convertData(object:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "updateEvent(event:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9DD43B0E-944D-42E1-BB9F-44D6AE7C3999"
+            uuid = "3760021A-5DCC-4F59-B9AB-9BB43837EE4A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OfflineEvent/ManagedObject/EventObject+CoreDataClass.swift"
+            filePath = "OfflineEvent/Scenes/NetworkResource/EventNetworkResource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "init(from:)"
-            landmarkType = "7">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "params"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79E4CAC7-B5C6-4158-82D8-3638497F0DF2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OfflineEvent/ManagedObject/EventObject+CoreDataClass.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "encode(to:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46F068EB-8484-45B5-8FAB-D98B07D5C3CE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OfflineEvent/ManagedObject/EventObject+CoreDataClass.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "init(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1BAF2425-2C30-4304-A423-0220D958AAE3"
+            uuid = "1B4CCD7F-10E3-4884-9F57-F96488C20BE1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "fetchLocalDataIsExcists(entityName:)"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "updateEvent(updateObject:isServerUpdate:isupdate:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED044276-45DC-40A5-99D4-035DAC6D174D"
-            shouldBeEnabled = "No"
+            uuid = "94B98208-470C-421D-A406-65710EB75B78"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OfflineEvent/ApiHandler/OENetworkResponse.swift"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "init(from:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "updateEvent(updateObject:isServerUpdate:isupdate:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F8AB877-0A23-4991-AAF1-CB3D12DB8CEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "updateEvent(updateObject:isServerUpdate:isupdate:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEFB7CFA-792D-4E22-B0A1-A985F5DD9497"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "updateEvent(updateObject:isServerUpdate:isupdate:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEFB7CFA-792D-4E22-B0A1-A985F5DD9497 - 5734e0168ad91adb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OfflineEvent.EventObject, OfflineEvent.ErrorHandler&gt;) -&gt; () in OfflineEvent.OELocalDbHandler.updateEvent(updateObject: OfflineEvent.EventModel, isServerUpdate: Swift.Bool, isupdate: Swift.Bool, completionHandler: (Swift.Result&lt;Swift.Bool, OfflineEvent.ErrorHandler&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OfflineEvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vijay/Documents/MyUse/OfflineEvent/OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "413">
+               </Location>
+               <Location
+                  uuid = "AEFB7CFA-792D-4E22-B0A1-A985F5DD9497 - 5734e0168ad91adb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OfflineEvent.EventObject, OfflineEvent.ErrorHandler&gt;) -&gt; () in OfflineEvent.OELocalDbHandler.updateEvent(updateObject: OfflineEvent.EventModel, isServerUpdate: Swift.Bool, isupdate: Swift.Bool, completionHandler: (Swift.Result&lt;Swift.Bool, OfflineEvent.ErrorHandler&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OfflineEvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vijay/Documents/MyUse/OfflineEvent/OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "442">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9983A852-BEFF-442C-A11B-374E6B8DC198"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "updateEvent(updateObject:isServerUpdate:isupdate:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9983A852-BEFF-442C-A11B-374E6B8DC198 - cffd6cace5932312"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OfflineEvent.OELocalDbHandler.updateEvent(updateObject: OfflineEvent.EventModel, isServerUpdate: Swift.Bool, isupdate: Swift.Bool, completionHandler: (Swift.Result&lt;Swift.Bool, OfflineEvent.ErrorHandler&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OfflineEvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vijay/Documents/MyUse/OfflineEvent/OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "478">
+               </Location>
+               <Location
+                  uuid = "9983A852-BEFF-442C-A11B-374E6B8DC198 - 5734e0168ad91adb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;OfflineEvent.EventObject, OfflineEvent.ErrorHandler&gt;) -&gt; () in OfflineEvent.OELocalDbHandler.updateEvent(updateObject: OfflineEvent.EventModel, isServerUpdate: Swift.Bool, isupdate: Swift.Bool, completionHandler: (Swift.Result&lt;Swift.Bool, OfflineEvent.ErrorHandler&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "OfflineEvent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vijay/Documents/MyUse/OfflineEvent/OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "413">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8765F953-04E1-4D4E-941F-BB7C505A919C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "fetchSingleEventWithUUID(uuid:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D0B7A7E-B397-41B8-BD67-9ED0F879D0F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "fetchSingleEventWithUUID(uuid:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D2EF5D9-C556-4235-B3E7-D391B2F817B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/CoreDataHandler/OELocalDbHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "fetchSingleEventWithUUID(uuid:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B44B1CD8-1EF5-4937-90C1-E6F1EDAC759F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/Repository/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "performCURD(event:type:resource:onCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38404011-02E9-43E2-A028-B85B0D9DB636"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OfflineEvent/Repository/Repository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "fetchAllEvent(onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

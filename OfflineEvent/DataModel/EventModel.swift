@@ -15,7 +15,7 @@ enum EventStatus: String,Codable {
 }
 
 struct EventModel: Codable {
-    let uuid : String
+    var uuid : String
     let name: String
     let location: String
     let date: String
@@ -26,6 +26,10 @@ struct EventModel: Codable {
     
     mutating func isServerUpdate(status: Bool) {
         self.isServerUpdated = status
+    }
+    
+    mutating func updateUUID(uuid: String) {
+        self.uuid = uuid
     }
 }
 

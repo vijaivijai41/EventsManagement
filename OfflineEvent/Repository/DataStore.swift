@@ -10,8 +10,11 @@ import Foundation
 
 class DataStore {
     static let shared: DataStore = DataStore()
+    var connectivity: Connectivity?
 
-    private init() {}
+    private init() {
+        connectivity = Connectivity.instance
+    }
 
     deinit {
         print("DataStore deinit")

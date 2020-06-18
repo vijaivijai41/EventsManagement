@@ -27,13 +27,12 @@ class Repository {
         self.apiHandler = apiHandler
         self.localDataHandler = localDataHandler
         
-        Connectivity.instance.connectionStatusUpdate = { [weak self] status in
+        dataStore.connectivity?.connectionStatusUpdate = { [weak self] status in
             guard let self = self else { return }
             if status {
                 self.serverConnectionUpdate()
             }
         }
-        
     }
     
     // fetch all events
@@ -51,12 +50,13 @@ class Repository {
                     if let events = codable as? [EventModel] {
                         self.dataStore.eventList = events.filter({($0.status?.rawValue) != "DELETED"})
                         
-                        if self.localDataHandler.fetchLocalDataIsExcists(entityName: "EventObject") {
+                        if self.localDataHandler.fetchLocalDataIsExcists(entityName: "EventObject", count: events.count) {
                             if let data = self.convertData(object: events) {
                                 self.localDataHandler.saveCoreData(data, returnClass: [EventObject].self) { (result) in
                                     switch result {
                                     case .success(_):
                                         print("save Successfully")
+                                        
                                     case .failure(let error):
                                          onCompletion(.failure(error))
                                     }
@@ -89,13 +89,19 @@ class Repository {
         }
     }
     
+    func fetchFromServer() {
+        
+    }
+    
+    
+    
     
     func updateEvent(event: EventModel ,onCompletion: @escaping(Result<Bool, ErrorHandler>)->()) {
         if Connectivity.instance.connectionStatus() {
             let resource = EventResource.updateEvent(event: event)
             self.performCURD(event: event, type: .update, resource: resource, onCompletion: onCompletion)
         } else {
-            self.localDataHandler.updateEvent(updateObject: assignManagedObject(model: event,isServerUpdate: false,isUpdate: true), completionHandler: onCompletion)
+            self.localDataHandler.updateEvent(updateObject: event,isServerUpdate: false, isupdate: true, completionHandler: onCompletion)
         }
     }
     
@@ -104,7 +110,7 @@ class Repository {
             let resource = EventResource.deleteEvent(event: event)
             self.performCURD(event: event, type: .delete, resource: resource, onCompletion: onCompletion)
         } else {
-            self.localDataHandler.updateEvent(updateObject: assignManagedObject(model: event,isServerUpdate: false,isUpdate: false), completionHandler: onCompletion)
+            self.localDataHandler.updateEvent(updateObject: event, isServerUpdate: false, isupdate: false, completionHandler: onCompletion)
         }
     }
     
@@ -126,15 +132,26 @@ class Repository {
             switch result {
             case .success(let status):
                 if let _status = status as? String, _status == "OK"{
+                    var eventInfo = event
                     switch type {
                     case .create:
-                        if let data = self.convertData(object: event) {
+                        
+                        eventInfo.isServerUpdate(status: true)
+                        if let data = self.convertData(object: eventInfo) {
+                            self.dataStore.eventList.append(eventInfo)
                             self.localDataHandler.saveCoreData(data, returnClass: EventObject.self, completionHandler: onCompletion)
                         }
                     case .delete:
+                        if let index = self.dataStore.eventList.firstIndex(where: { $0.name == eventInfo.name }) {
+                            self.dataStore.eventList.remove(at: index)
+                        }
                         self.localDataHandler.deleteEvent(name: event.name, completionHandler: onCompletion)
                     case .update:
-                        self.localDataHandler.updateEvent(updateObject: self.assignManagedObject(model: event,isServerUpdate: true, isUpdate: true), completionHandler: onCompletion)
+                        if let index = self.getAllEvents.firstIndex(where: { $0.name == eventInfo.name }) {
+                            self.dataStore.eventList[index] = event
+                        }
+
+                        self.localDataHandler.updateEvent(updateObject: eventInfo, isServerUpdate: true, isupdate: true, completionHandler: onCompletion)
                     case .read:
                         print("not update")
                     }
@@ -147,7 +164,7 @@ class Repository {
     
     
     func serverConnectionUpdate() {
-        let event = getAllEvents.filter({$0.isServerUpdated == false})
+        let event = getAllEvents.filter({$0.isServerUpdated ?? false == false})
         let needToAdd = event.filter({$0.status == EventStatus.created})
     
         // Add Event
@@ -221,17 +238,6 @@ class Repository {
         return nil
     }
     
-    func assignManagedObject(model: EventModel, isServerUpdate: Bool, isUpdate: Bool)-> EventObject {
-        let object = EventObject()
-        object.category = model.category
-        object.name = model.name
-        object.date = model.date
-        object.time = model.time
-        object.status = (isUpdate == true) ? "UPDATED" : "DELETED"
-        object.isServerUpdated = isServerUpdate
-        object.location = model.location
-        object.uuid = model.uuid
-        return object
-    }
+
     
 }

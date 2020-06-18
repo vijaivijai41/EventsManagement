@@ -32,13 +32,6 @@ class Connectivity {
         reachability.whenUnreachable = { reachability in
             self.connectionStatusUpdate?(false)
         }
-
-        switch reachability.connection {
-        case .cellular,.wifi:
-            self.connectionStatusUpdate?(true)
-        case .unavailable,.none:
-            self.connectionStatusUpdate?(false)
-        }
         
         return reachability.isConnectedToNetwork()
     }

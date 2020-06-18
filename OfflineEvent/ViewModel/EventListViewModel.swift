@@ -27,7 +27,9 @@ class EventListViewModel {
     weak var coordinatorDelaget: EventListCoordinatorDelegate?
     let repository: Repository
     
-    var eventList: [EventModel] = []
+    var eventList: [EventModel]  {
+        return self.repository.dataStore.eventList
+    }
     
     init(viewDelegate: EventListViewModelViewDelegte, coordinatorDelaget: EventListCoordinatorDelegate, repository: Repository) {
         self.coordinatorDelaget = coordinatorDelaget
@@ -40,9 +42,7 @@ class EventListViewModel {
         self.repository.fetchAllEvent { (result) in
             switch result {
             case .success(let model):
-                self.eventList.removeAll()
-                self.eventList.append(contentsOf: model)
-                self.viewDelegate?.eventViewModel(viewModel: self, didFetchEventList: self.eventList)
+                self.viewDelegate?.eventViewModel(viewModel: self, didFetchEventList: model)
             case .failure(let error):
                 self.viewDelegate?.eventVieModel(viewMoel: self, didFailure: error.errorString)
             }
@@ -69,7 +69,6 @@ class EventListViewModel {
         self.repository.deleteEvent(event: eventInfo) { (result) in
             switch result {
             case .success(let status):
-                self.eventList[indexPath.row] = eventInfo
                 self.viewDelegate?.eventVieModel(viewModel: self, didUpdateLocal: status)
             case .failure(let error):
                 self.viewDelegate?.eventVieModel(viewMoel: self, didFailure: error.errorString)

@@ -3,10 +3,10 @@
     <entity name="EventObject" representedClassName=".EventObject" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="String"/>
-        <attribute name="isServerUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isServerUpdated" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String" defaultValueString="CREATED"/>
         <attribute name="time" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="String"/>
     </entity>

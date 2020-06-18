@@ -34,7 +34,6 @@ class AddEventViewModel  {
     }
     
     
-    
     func addEvent(eventInfo: EventModel) {
         self.repository.addEvent(event: eventInfo) { (result) in
             switch result {
@@ -62,10 +61,14 @@ class AddEventViewModel  {
     }
     
     func updateEvent(indexPath: IndexPath,eventInfo: EventModel) {
-        self.repository.updateEvent(event: eventInfo) { (result) in
+        var event = eventInfo
+        let excistEvent = self.repository.dataStore.eventList[indexPath.row]
+        event.updateUUID(uuid: excistEvent.uuid)
+        
+        self.repository.updateEvent(event: event) { (result) in
             switch result {
             case .success(let status):
-                self.repository.dataStore.eventList[indexPath.row] = eventInfo
+                self.repository.dataStore.eventList[indexPath.row] = event
                 self.viewDelegate?.addEventViewModel(viewModel: self, didUpdateLocal: status)
                 self.coordinatorDelegate?.addEventViewModel(viewMode: self, eventUpdateSuccessBack: true)
             case .failure(let error):

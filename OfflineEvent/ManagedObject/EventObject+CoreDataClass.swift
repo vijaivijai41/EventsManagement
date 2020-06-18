@@ -35,6 +35,7 @@ public class EventObject: NSManagedObject,Codable {
         }
         
         self.init(entity: manageObjList, insertInto: manageObjContext)
+        
         let values = try decoder.container(keyedBy: CodingKeys.self)
         uuid = try values.decode(String.self, forKey: .uuid)
         name = try values.decode(String.self, forKey: .name)
@@ -42,8 +43,18 @@ public class EventObject: NSManagedObject,Codable {
         time = try values.decode(String.self, forKey: .time)
         category = try values.decode(String.self, forKey: .category)
         location = try values.decode(String.self, forKey: .location)
-        isServerUpdated = try values.decode(Bool.self, forKey: .isServerUpdated)
-        status = try values.decode(String.self, forKey: .status)
+        if let serverUpdate = try? values.decode(Bool.self, forKey: .isServerUpdated) {
+            isServerUpdated = serverUpdate
+        } else {
+            isServerUpdated = true
+        }
+        
+        if let _status = try? values.decode(String.self, forKey: .status) {
+            status = _status
+        } else {
+            status = "CREATED"
+        }
+        
     }
     
     // MARK: - Encoding the data

@@ -34,6 +34,13 @@ class OEWebserviceHandler {
                 switch httpResponse.statusCode  {
                 case 200..<299:
                     if let data = responseData {
+                        do {
+                            let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as? Dictionary<String,AnyObject>
+                            
+                            print(jsonResult)
+                            
+                        }
+                        
                         self.codableConvertModel(fromData: data, returnType: OENetworkResponse.self) { (result) in
                             switch result {
                             case .success(let codable):
@@ -46,7 +53,6 @@ class OEWebserviceHandler {
                                 onCompletion(.failure(error))
                             }
                         }
-                        self.codableConvertModel(fromData: data, returnType: OENetworkResponse.self, onCompletion: onCompletion)
                     }
                 default:
                     onCompletion(.failure(.nodata))

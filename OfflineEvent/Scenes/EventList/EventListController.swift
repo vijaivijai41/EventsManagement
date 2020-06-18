@@ -42,13 +42,14 @@ class EventListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Events"
+        self.showLoader()
+        self.viewModel.fetchEventlist()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.showLoader()
-        self.viewModel.fetchEventlist()
+        self.eventTableView.reloadData()
     }
     
     @IBAction func addNewEventButtonDidTap(_ sender: Any) {
@@ -113,7 +114,6 @@ extension EventListController: EventListViewModelViewDelegte {
     func eventViewModel(viewModel: EventListViewModel, didFetchEventList eventInfo: [EventModel]) {
         self.hideLoader()
         self.eventTableView.reloadData()
-
     }
    
 }

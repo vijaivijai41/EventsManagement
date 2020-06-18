@@ -67,11 +67,11 @@ class OELocalDbHandler {
     }
     
     ///Local data fetch from core data
-    func fetchLocalDataIsExcists(entityName:String) -> Bool {
+    func fetchLocalDataIsExcists(entityName:String,count: Int) -> Bool {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         do {
             let result = try mainManagedObjectContext.fetch(fetchRequest)
-            if result.count > 0 {
+            if result.count > 0 || result.count != count {
                 return true
             }
             return false
@@ -104,25 +104,44 @@ class OELocalDbHandler {
     }
     
     
-    func updateEvent(updateObject: EventObject, completionHandler:(Result<Bool, ErrorHandler>)->()) {
+    func updateEvent(updateObject: EventModel, isServerUpdate: Bool,  isupdate: Bool ,completionHandler:(Result<Bool, ErrorHandler>)->()) {
+       
+        self.fetchSingleEventWithUUID(uuid: updateObject.uuid ) { (results) in
+            switch results {
+            case .success(let filterList) :
+                filterList.name = updateObject.name
+                filterList.uuid = updateObject.uuid
+                filterList.category = updateObject.category
+                filterList.date = updateObject.date
+                filterList.time = updateObject.time
+                filterList.status = (isupdate == true) ? "UPDATED" : "DELETED"
+                filterList.isServerUpdated = isServerUpdate
+                do {
+                    try privateManagedObjectContext.save()
+                    completionHandler(.success(true))
+                } catch _ {
+                    completionHandler(.failure(.serviceError))
+                }
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+       }
+    }
+    
+    func fetchSingleEventWithUUID(uuid: String, completionHandler:(Result<EventObject,ErrorHandler>)->()) {
         let fetchRequest = NSFetchRequest<EventObject>(entityName: "EventObject")
         do {
-            var result = try privateManagedObjectContext.fetch(fetchRequest)
-            
-            guard let index = result.firstIndex(of: updateObject) else { return }
-            result[index] = updateObject
-
-            do {
-                try privateManagedObjectContext.save()
-                completionHandler(.success(true))
-            } catch _ {
-                completionHandler(.failure(.networkError))
-            }
+            let result = try privateManagedObjectContext.fetch(fetchRequest)
+            guard let resultFilter = result.filter({$0.uuid == uuid}).first else { return }
+            completionHandler(.success(resultFilter))
         }catch _ {
-            completionHandler(.failure(.networkError))
+            completionHandler(.failure(.nodata))
         }
     }
+    
 }
+
+
 
 
 

@@ -58,7 +58,6 @@ extension AppCoordinator: EventListCoordinatorDelegate {
         self.showEventCreateScreen( isEdit: false, indexPath: nil)
     }
     
-    
     func showEventCreateScreen(isEdit: Bool, indexPath: IndexPath?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "NewEventController") as! NewEventController

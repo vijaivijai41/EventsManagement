@@ -2,7 +2,7 @@
 //  EventObject+CoreDataProperties.swift
 //  OfflineEvent
 //
-//  Created by Vijay on 12/06/20.
+//  Created by Vijay on 18/06/20.
 //  Copyright © 2020 Vijay. All rights reserved.
 //
 //
@@ -19,11 +19,11 @@ extension EventObject {
 
     @NSManaged public var category: String?
     @NSManaged public var date: String?
+    @NSManaged public var isServerUpdated: Bool
     @NSManaged public var location: String?
     @NSManaged public var name: String?
+    @NSManaged public var status: String?
     @NSManaged public var time: String?
     @NSManaged public var uuid: String?
-    @NSManaged public var isServerUpdated: Bool
-    @NSManaged public var status: String?
 
 }

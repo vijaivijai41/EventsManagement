@@ -69,6 +69,7 @@ class NewEventController: UITableViewController {
     }
     
     @IBAction func saveButtonDidTap(_ sender: Any) {
+        
         guard let eventname  = eventNameTxt.text , !eventname.isEmpty else {
             self.showAlert(message: "Please enter event name", okButtonAction: nil)
             return
@@ -93,12 +94,12 @@ class NewEventController: UITableViewController {
             return
         }
         
-        let uuid = eventname+date+time
-        let eventInfo = EventModel(uuid:uuid , name: eventname, location: location, date: date, time: time, category: category, isServerUpdated: false, status: .created)
-       
+        let uuid = eventname + Date().displayFormatedDate
+        let eventInfo = EventModel(uuid: uuid , name: eventname, location: location, date: date, time: time, category: category, isServerUpdated: false, status: .created)
+
         self.showLoader()
-      
         if let indexPath = viewModel.editIndexPath {
+            
             self.viewModel.updateEvent(indexPath: indexPath, eventInfo: eventInfo)
         } else {
             self.viewModel.addEvent(eventInfo: eventInfo)
